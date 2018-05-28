@@ -18,7 +18,7 @@ class ActivityStreamTest: BaseTestCase {
 
     override func setUp() {
         // Test name looks like: "[Class testFunc]", parse out the function name
-        let parts = name!.replacingOccurrences(of: "]", with: "").split(separator: " ")
+        let parts = name.replacingOccurrences(of: "]", with: "").split(separator: " ")
         let key = String(parts[1])
         if testWithDB.contains(key) {
             // for the current test name, add the db fixture used
